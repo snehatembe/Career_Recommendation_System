@@ -1,0 +1,268 @@
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+	</style>
+	<%@include file="allcss.jsp" %>
+	<script>
+	function validate() {
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            var q2 = document.querySelector('input[name="q2"]:checked');
+            var q3 = document.querySelector('input[name="q3"]:checked');
+            var q4 = document.querySelector('input[name="q4"]:checked');
+            var q5 = document.querySelector('input[name="q5"]:checked');
+            var q6 = document.querySelector('input[name="q6"]:checked');
+            var q7 = document.querySelector('input[name="q7"]:checked');
+            var q8 = document.querySelector('input[name="q8"]:checked');
+            var q9 = document.querySelector('input[name="q9"]:checked');
+            var q10 = document.querySelector('input[name="q10"]:checked');
+
+            // Simple validation for each field
+            if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
+                alert("Please answer all the questions.");
+                return false;
+            }
+        }
+	</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenth Marks Page Page</title>
+</head>
+
+<body>
+<div calss="container-fuild">
+<%@include file="navbar.jsp" %>
+<div class="card py-4">
+<div class="card-body text-center">
+</div>
+<div class="container-fliuid">
+	<div class="row">
+	<div class="col-md-6 offset-md-3">
+	<div class="card mt-4">
+	<div class="card-header">
+	<div class="h">
+	<center>
+	<h4><b>Computer/IT Skill Test Test</b></h4>
+	</center>
+	</div>
+	<div class="card-body">
+
+	<form onsubmit="return validate()" method="POST">
+	
+	<div class="form-group">
+                                        <b><label>1. What is the primary focus of Computer Science?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q1" value="b">
+                                            <label class="form-check-label">a. Managing information</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q1" value="a">
+                                            <label class="form-check-label">b. Designing and developing software systems</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q1" value="c">
+                                            <label class="form-check-label">c. Implementing computer networks</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>2. Which field explores artificial intelligence and machine learning?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q2" value="b">
+                                            <label class="form-check-label">a. Information Technology</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q2" value="a">
+                                            <label class="form-check-label">b. Computer Science</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q2" value="c">
+                                            <label class="form-check-label">c. Both</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>3. What does Information Technology primarily deal with?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q3" value="b">
+                                            <label class="form-check-label">a. Theoretical aspects of computation</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q3" value="a">
+                                            <label class="form-check-label">b. Practical application of computing technologies</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q3" value="c">
+                                            <label class="form-check-label">c. Algorithm design</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>4. In which domain are breakthroughs in healthcare and finance often attributed?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q4" value="c">
+                                            <label class="form-check-label">a. Computer Science</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q4" value="b">
+                                            <label class="form-check-label">b. Information Technology</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q4" value="a">
+                                            <label class="form-check-label">c. Both</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>5. What is a key aspect of Information Technology?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q5" value="b">
+                                            <label class="form-check-label">a. Theoretical exploration of algorithms</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q5" value="a">
+                                            <label class="form-check-label">b. Managing and processing information</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q5" value="c">
+                                            <label class="form-check-label">c. Development of artificial intelligence</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>6. Which technology involves the secure and transparent recording of transactions?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q6" value="b">
+                                            <label class="form-check-label">a. Cloud computing</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q6" value="a">
+                                            <label class="form-check-label">b. Blockchain</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q6" value="c">
+                                            <label class="form-check-label">c. Internet of Things (IoT)</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>7. Which field involves creating and managing computer systems and databases?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q7" value="c">
+                                            <label class="form-check-label">a. Artificial Intelligence</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q7" value="b">
+                                            <label class="form-check-label">b. Machine Learning</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q7" value="a">
+                                            <label class="form-check-label">c. Information Technology</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>8. What is the synergy between Computer Science and Information Technology evident in?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q8" value="c">
+                                            <label class="form-check-label">a. Advancements in healthcare</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q8" value="b">
+                                            <label class="form-check-label">b. Development of blockchain and IoT</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q8" value="a">
+                                            <label class="form-check-label">c. Both</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>9. What does Computer Science encompass?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q9" value="b">
+                                            <label class="form-check-label">a. Practical application of computing technologies</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q9" value="a">
+                                            <label class="form-check-label">b. Theories of computation and algorithm design</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q9" value="c">
+                                            <label class="form-check-label">c. Database management</label>
+                                        </div>
+                                    </div><br><br>
+
+
+                                    <div class="form-group">
+                                        <b><label>10. Which field explores the extraction of meaningful insights from large datasets?</label></b><br>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q10" value="a">
+                                            <label class="form-check-label">a. Data Science</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q10" value="b">
+                                            <label class="form-check-label">b. Cloud Computing</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="q10" value="c">
+                                            <label class="form-check-label">c. Information Technology</label>
+                                        </div>
+                                    </div><br><br>
+	
+  	<button type="submit" value="comitbtn" name="btn2" class="btn btn-primary badge-pill btn-block"><b>Submit</b></button><br>
+	</form>
+
+	<% if (request.getParameter("btn2") != null) {
+                                        // Calculate the score based on the selected options
+                                        int score = 0;
+                                        for (int i = 1; i <= 10; i++) {
+                                            String responseValue = request.getParameter("q" + i);
+                                            if (responseValue != null && responseValue.equals("a")) {
+                                                score++;
+                                            }
+                                        }
+
+                                        // Store the uid and totalScore in the PTest table
+                                        try {
+                                            Class.forName("com.mysql.cj.jdbc.Driver");
+                                            String url = "jdbc:mysql://localhost:3306/pcrs";
+                                            String un = "root";
+                                            String pw = "abc123";
+                                            Connection con = DriverManager.getConnection(url, un, pw);
+
+                                            String insertSql = "INSERT INTO comittest (uid, CompITtotalScore) VALUES (?, ?)";
+                                            PreparedStatement insertPst = con.prepareStatement(insertSql);
+                                            insertPst.setString(1, (String) session.getAttribute("uid"));
+                                            insertPst.setInt(2, score);
+                                             int rowsAffected = insertPst.executeUpdate();
+
+                                            if (rowsAffected > 0) {
+                                                // Redirect to SkillTest2.jsp
+                                                response.sendRedirect("SkillTest2.jsp");
+                                            } else {
+                                                out.println("<h5 class='text-center' style='color:white;position: absolute;bottom: 28px;right:230;'><u>Something went wrong! Please try again...</u></h5>");
+                                            }
+
+                                            con.close();
+                                        } catch (Exception e) {
+                                            out.println("Database error: " + e);
+                                        }
+                                    } %>
+</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

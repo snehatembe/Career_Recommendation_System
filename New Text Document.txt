@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mechanical career Page</title>
+<style>
+.caption{
+   font-size: 25px;
+   font-weight: bolder;
+   color:white;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.center {
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+li{
+text-align: left;
+}
+h3{
+text-align: left;
+}
+</style>
+<%@include file="allcss.jsp" %>
+</head>
+<body>
+<div calss="container-fuild">
+<%@include file="navbar.jsp" %>
+<div class="card py-4">
+<div class="card-body text-center">
+<div class="card-body text-center">
+<div class="card-body text-center">
+<div class="card-body text-center">
+
+<div class="imageContainer">
+<b><h1 style="color:rgba(255, 165, 52, 1.00);font-size:80px;">Thank you for visiting!!!</h1></b><br>
+<i class="fa fa-handshake-o" aria-hidden="true" style="font-size:100px;"></i><br>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
